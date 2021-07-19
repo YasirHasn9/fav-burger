@@ -11,7 +11,7 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 3rem;
-    z-index: 99;
+    /* z-index: 99; */
     .menu {
         width: 33%;
         text-align: center;
