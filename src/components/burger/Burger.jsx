@@ -1,11 +1,13 @@
 import { Wrapper } from "./burger.style";
 import { BurgerIngredients } from "./burgerIngredients/BurgerIngredients";
 export const Burger = (props) => {
-    const makeIngredientsDynamic = Object.keys(props.ingredients).map((key) => {
-        return [...Array(props.ingredients[key])].map((_, i) => {
-            return <BurgerIngredients type={key} key={key + i} />;
-        });
-    });
+    const makeIngredientsDynamic = Object.keys(props.ingredients)
+        .map((key) => {
+            return [...Array(props.ingredients[key])].map((_, i) => {
+                return <BurgerIngredients type={key} key={key + i} />;
+            });
+        })
+        .reduce((arr, ele) => [...arr, ...ele], []);
     console.log(makeIngredientsDynamic);
     return (
         <Wrapper>

@@ -1,8 +1,9 @@
 import { useMemo } from "react";
 import { Wrapper } from "./controlBurger.style";
+import { ControlIngredients } from "../controlIngredients/ControlIngredients";
 
 export const ControlBurger = (props) => {
-    const ingredientsType = useMemo(
+    const controlNumberOfIngredients = useMemo(
         () => [
             { label: "Salad", type: "salad" },
             { label: "Bacon", type: "bacon" },
@@ -14,7 +15,15 @@ export const ControlBurger = (props) => {
 
     return (
         <Wrapper>
-            <div>button for the Ingredients</div>
+            <p className="price">Total Price: ${props.price.toFixed(2)} </p>
+            {controlNumberOfIngredients.map((ingredient) => {
+                return (
+                    <ControlIngredients
+                        key={ingredient.label}
+                        label={ingredient.label}
+                    />
+                );
+            })}
         </Wrapper>
     );
 };

@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
         font-size: 1.6rem;
         font-weight: bold;
         margin: 2rem;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
     }
 `;
 

@@ -25,12 +25,17 @@ export const BurgerBuilder = (props) => {
     });
 
     const addIngredients = (key) => {
-        let old;
+        let oldCount = burgerInfo.ingredients[key];
+        let updatedCount = oldCount + 1;
+        let updatedIngredients = {
+            ...burgerInfo.ingredients,
+        };
+        updatedIngredients[key] = updatedCount;
     };
     return (
         <div>
             <Burger ingredients={burgerInfo.ingredients} />
-            <ControlBurger />
+            <ControlBurger price={burgerInfo.totalPrice} />
         </div>
     );
 };
