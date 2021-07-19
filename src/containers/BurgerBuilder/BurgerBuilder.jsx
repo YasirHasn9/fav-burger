@@ -31,11 +31,20 @@ export const BurgerBuilder = (props) => {
             ...burgerInfo.ingredients,
         };
         updatedIngredients[key] = updatedCount;
+        let priceAddition = INGREDIENT_PRICES[key];
+        let newPrice = burgerInfo.ingredients.totalPrice + priceAddition;
+        setBurgerInfo({
+            ingredients: updatedIngredients,
+            totalPrice: newPrice,
+        });
     };
     return (
         <div>
             <Burger ingredients={burgerInfo.ingredients} />
-            <ControlBurger price={burgerInfo.totalPrice} />
+            <ControlBurger
+                price={burgerInfo.totalPrice}
+                addIngredients={addIngredients}
+            />
         </div>
     );
 };

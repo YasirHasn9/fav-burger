@@ -25,10 +25,11 @@ export const Meat = styled.div`
 `;
 
 export const Bacon = styled.div`
+    width: 100%;
     margin: 0.5rem;
     height: 1.2rem;
     background-color: #780303;
-    /* border-radius: 20px; */
+    border-radius: 20px;
     @media only screen and (min-width: 320px) and (max-width: 480px) {
         height: 2rem;
     }
@@ -50,7 +51,6 @@ export const Cheese = styled.div`
     padding: 0.8rem 0;
     height: 0.8rem;
     width: 100%;
-    /* background-color: #f9b12a; */
     background-color: #f9b12a;
     border-radius: 1rem;
     @media only screen and (min-width: 320px) and (max-width: 480px) {

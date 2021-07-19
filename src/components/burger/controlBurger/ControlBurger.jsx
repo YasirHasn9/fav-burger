@@ -3,6 +3,7 @@ import { Wrapper } from "./controlBurger.style";
 import { ControlIngredients } from "../controlIngredients/ControlIngredients";
 
 export const ControlBurger = (props) => {
+    console.log("ControlBurger", props);
     const controlNumberOfIngredients = useMemo(
         () => [
             { label: "Salad", type: "salad" },
@@ -21,6 +22,9 @@ export const ControlBurger = (props) => {
                     <ControlIngredients
                         key={ingredient.label}
                         label={ingredient.label}
+                        addIngredients={() =>
+                            props.addIngredients(ingredient.type)
+                        }
                     />
                 );
             })}

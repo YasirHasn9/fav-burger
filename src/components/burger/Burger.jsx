@@ -8,7 +8,6 @@ export const Burger = (props) => {
             });
         })
         .reduce((arr, ele) => [...arr, ...ele], []);
-    console.log(makeIngredientsDynamic);
     return (
         <Wrapper>
             <BurgerIngredients type="bread-top" />
