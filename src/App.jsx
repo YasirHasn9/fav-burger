@@ -1,9 +1,10 @@
 import { GlobalStyle } from "./common/Global.style";
+import { Layout } from "./hoc/layout/Layout";
 export const App = () => {
     return (
         <>
-            <h1>Hello from the app</h1>
             <GlobalStyle />
+            <Layout></Layout>
         </>
     );
 };
